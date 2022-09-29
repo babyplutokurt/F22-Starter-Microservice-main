@@ -11,13 +11,13 @@ class ColumbiaStudentResource:
     @staticmethod
     def _get_connection():
 
-        usr = os.environ.get("root")
-        pw = os.environ.get("Kurt2cac.")
-        h = os.environ.get("localhost")
+        usr = os.environ.get("DBUSER")
+        pw = os.environ.get("DBPSWD")
+        h = os.environ.get("DBHOST")
 
         conn = pymysql.connect(
             host="e61561.cnpl1kg3ggad.us-east-1.rds.amazonaws.com",
-            port=3306,
+            #port=3306,
             user="admin",
             password="Kurt2cac.",
             cursorclass=pymysql.cursors.DictCursor,
